@@ -2,6 +2,7 @@
 <html lang="en-ca">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
     <title>Exercise 6: Banh Mi, menus, and layout</title>
     
  <!-- These are the embed codes for the two google fonts in our document, we will learn about google fonts next week -->
@@ -18,7 +19,11 @@
       body {
       font-family: "Ledger", serif;
       font-weight: 400;
-      font-style: normal;  
+      font-style: normal;
+      background-color: #fbe3ea;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 30px;
       }
       
       h1 , h2 , ul {
@@ -29,6 +34,9 @@
       
       h1 {
       font-weight: 600;
+      font-size: 4rem;
+      text-align: center;
+      margin: 40px 0 20px;
       }
       
       h2 {
@@ -39,6 +47,73 @@
       font-weight: 700;
       }
       
+      ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      }
+      
+      li {
+        display: inline-block;
+        margin-right: 30px;
+      }
+      
+      li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #DB7093;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      }
+      
+      li a:hover {
+      background-color: Pink;
+      }
+      .container {
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+      }
+      .grid-item {
+      background-color: white;
+      padding: 0 0 20px 0;
+      text-align: center;
+      }
+      
+      .grid-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .grid-item h2{
+      margin: 20px 25px 10px;
+      font-size: 1.5rem;
+      }
+      
+      .grid-item p {
+        margin: 0 25px;
+        font-size: 1rem;
+      }
+      .hero {
+      font-size: 2.2rem;
+      line-height: 1.3;
+      color: #8a1c46;
+      margin: 40px 60px;
+      }
+      
+      footer {
+        background-color: #8a1c46;
+        color: white;
+        text-align: center;
+        padding: 30px 40px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+      }
+      
+      footer p {
+      margin: 0;
+      font-size: 1.2 rem;
+      }
     </style>
   </head>
   <body>
@@ -51,21 +126,35 @@
       <li><a href="#">About</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
-
-    <h1>At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
-
-    <h2>Classic Pork Banh Mi</h2>
+    
+    <h1 class="hero">At Greg’s Banh Mi, we’re serving up the perfect marriage of French and Vietnamese culinary traditions&mdash;crispy-on-the-outside, pillowy-on-the-inside baguettes loaded with bold, fresh flavours that'll make your taste buds sing.</h1>
+  
+  <div class="container">
+    
+  <div class ="grid-item">
+  <img src="banh-mi.jpg" alt="two Bahn mi sandwiches on a wooden board">
+  
+  <h2> Classic Pork Banh Mi </h2>
     <p>Tender marinated pork topped with crisp pickled vegetables, fresh cilantro, and a smear of p&acirc;t&eacute; on a perfectly crusty baguette. A traditional favorite that balances savory, sweet, and tangy flavors in every bite.</p>
-
+ </div>
+    
+    <div class ="grid-item">
+  <img src="banh-mi.jpg" alt="two Bahn mi sandwiches on a wooden board">
     <h2>Lemongrass Chicken Banh Mi</h2>
     <p>Grilled chicken marinated in fragrant lemongrass and garlic, paired with cucumber, jalape&ntilde;os, and our house mayo. Light yet satisfying, this sandwich brings bright, aromatic flavors that'll transport you straight to Saigon.</p>
-
+    </div>
+    <div class ="grid-item">
+  <img src="banh-mi.jpg" alt="two Bahn mi sandwiches on a wooden board">
     <h2>Tofu Banh Mi</h2>
     <p>Crispy pan-fried tofu glazed in sweet soy sauce, layered with daikon, carrots, and fresh herbs for a vegetarian delight. Proof that plant-based can be just as bold and craveable as any meat-filled sandwich.</p>
-
+    </div>
+  
+  <div class ="grid-item">
+  <img src="banh-mi.jpg" alt="two Bahn mi sandwiches on a wooden board">
     <h2>Five-Spice Beef Banh Mi</h2>
     <p>Thinly sliced beef seared with aromatic five-spice blend and served with pickled vegetables and spicy Sriracha mayo. Rich, warming spices meet cool, crunchy toppings for an unforgettable flavor experience.</p>
-
+    </div>
+    </div>
     <footer>
       <p>Because life’s too short for boring sandwiches. Greg’s got you covered&mdash;one crispy baguette at a time.</p>
     </footer>
